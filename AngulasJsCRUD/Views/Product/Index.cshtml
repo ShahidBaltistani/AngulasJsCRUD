@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Product List</h2>
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 <div ng-app="myApp" ng-controller="productCtrl">
     <p>Product List</p>
@@ -13,7 +13,6 @@
             <th>Name</th>
             <th>Price</th>
             <th>Operation</th>
-
         </tr>
         <tr ng-repeat="product in Products">
             <td>{{product.Id}}</td>
@@ -65,28 +64,24 @@
         </table>
     </div>*@
 
-<div class="container" ng-show="divAdd">
-    <div>
-        <label>Id</label>
-        <input disabled="disabled" type="text" class="form-control" ng-model="productId" placeholder="Id" />
-    </div>
-    <div>
-        <label>Name</label>
-        <input type="text" ng-model="productName" class="form-control" placeholder="Enter Product Name"/>
-    </div>
-    <div>
-        <label>Price</label>
-        <input type="text" ng-model="productPrice" class="form-control" placeholder="Enter Product Price"/>
-    </div>
-    <br />
-    <br />
-
-    <div>
-        <button class="btn btn-primary" ng-click="AddUpdateProduct()">Save</button>
-        <button class="btn btn-danger" ng-click="Close()">Close</button>
-
-    </div>
-
-
-</div>
+        <div class="container" ng-show="divAdd">
+            <div>
+                <label>Id</label>
+                <input disabled="disabled" type="text" class="form-control" ng-model="productId" placeholder="Id" />
+            </div>
+            <div>
+                <label>Name</label>
+                <input type="text" ng-model="productName" class="form-control" placeholder="Enter Product Name"/>
+            </div>
+            <div>
+                <label>Price</label>
+                <input type="text" ng-model="productPrice" class="form-control" placeholder="Enter Product Price"/>
+            </div>
+            <br />
+            <br />
+            <div>
+                <button class="btn btn-primary" ng-click="AddUpdateProduct()">Save</button>
+                <button class="btn btn-danger" ng-click="Close()">Close</button>
+            </div>
+        </div>
 </div>
